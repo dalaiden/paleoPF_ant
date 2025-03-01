@@ -31,11 +31,15 @@ printf "\rProgress : [${_fill// /#}${_empty// /-}] ${_progress}%%"
 # Parameters |
 #-------------
 first_year=1958
-exp_name="${first_year}-2025_all_vars_1dot5std_SH_500km-grid_sx200_xy100"
+last_year=2000 
+exp_name="${first_year}-${last_year}_all_vars_1dot5std_SH_500km-grid_sx200_xy100"
 moddata_co_file=moddata_co_1dot5std
 make_posterior="True" # To reconstruct the posterior
 outfolder_rec='/nas07/dalaiden/cyfast/paleoPF_ant/DA_exps_outputs'
 frequence_sampling="3" # Frequency of the sampling. Will determine how big will the ensemble be. In season, multiple of 4.
+
+echo "continue the work to take into the last year"
+exit 1
 
 # Full location of the folder containing the model input files (without the last "/"), and realm of the variable to be assimilated (ocean or atmos) 
 here=$(pwd)
