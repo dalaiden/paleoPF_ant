@@ -8,3 +8,4 @@ info_prior/
 # Ignore specific files
 moddata_co_1dot5std
 moddata_co_2std
+._*
