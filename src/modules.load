@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "DA_offline environment"
+
+if [[ `hostname` = "storm"* ]]; then
+  echo "STORM"
+  module purge
+  module load releases/2020b
+  module load intel/2020b
+  module load netCDF-Fortran/4.5.3-iimpi-2020b  
+fi
+
+if [[ `hostname` = "coriolis"* ]]; then
+  echo "CORIOLIS"
+  module purge
+  module load opensuse
+  module load intel/2021.4.0.3224 netCDF-Fortran/4.5.3-intel
+fi
+
+if [[ `hostname` = "cyclone"* ]]; then
+  echo "CYCLONE"
+  module purge
+  module load releases/2023b
+  module load opensuse
+  module load intel/2018.4.057 netCDF-Fortran/4.4.4-intel
+fi

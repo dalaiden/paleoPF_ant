@@ -1,0 +1,9 @@
+export COMPILFORTAN  = ifort
+export COMPILCPP     = icc
+
+export FORTANFLAGS   = 
+export CPPFLAGS      =
+
+export INCS          = -I. -I$(EBROOTNETCDF)/include -I$(EBROOTNETCDFMINFORTRAN)/include
+export LIBSFORTRAN   = -L$(EBROOTNETCDF)/lib64 -lnetcdf -L$(EBROOTNETCDFMINFORTRAN)/lib -lnetcdff -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -liomp5 -lstdc++
+export LIBSCPP       =
